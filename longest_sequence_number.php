@@ -1,3 +1,7 @@
+<?php
+
+// Program to find the length of the longest sequence of numbers present in the given array of integers
+
 $a = [33,3,102,2,9,1,7,8,0,55,10,56,99,45,23,4];
 $map = [];
 foreach($a as $v) {
