@@ -13,7 +13,7 @@ sum = el => {
 	return f;
 };
 
-let res = +sum(4)(5)(6)
+res = +sum(4)(5)(6)
 console.log(res);
 console.log(sum(4)(5)(6));
 
@@ -33,6 +33,18 @@ sum = el => {
 	return f;
 };
 
-let sumRes = +sum(2)(3)(9)
-console.log(sumRes);
+res = +sum(2)(3)(9)
+console.log(res);
 console.log(sum(2)(3)(9));
+
+
+
+
+// Simple code with Eager evaluation
+sum = function (a) {
+  let closureFunc = b => b ? sum(a + b) : a;
+  closureFunc.toString = () => a;
+  return closureFunc;
+}
+
+console.log(sum(10)(2)(3)(4));
