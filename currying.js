@@ -13,8 +13,9 @@ sum = el => {
 	return f;
 };
 
-console.log(+sum(4)(5)(6));
-console.log(+sum(4));
+let res = +sum(4)(5)(6)
+console.log(res);
+console.log(sum(4)(5)(6));
 
 
 
@@ -32,5 +33,6 @@ sum = el => {
 	return f;
 };
 
-console.log(+sum(2)(3)(9));
-console.log(+sum(5));
+let sumRes = +sum(2)(3)(9)
+console.log(sumRes);
+console.log(sum(2)(3)(9));
