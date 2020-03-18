@@ -8,7 +8,7 @@ sum = el => {
 		return f;
 	};
 
-	f.valueOf = () => result;
+	f.toString = f.valueOf = () => result;
 
 	return f;
 };
@@ -27,7 +27,7 @@ sum = el => {
 		return f;
 	};
 
-	f.valueOf = () => input.reduce((acc, current) => acc += current, 0);
+	f.toString = f.valueOf = () => input.reduce((acc, current) => acc += current, 0);
 
 	return f;
 };
